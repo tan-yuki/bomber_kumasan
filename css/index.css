@@ -1,0 +1,17 @@
+#startButton {
+	font-size: 36px;
+	font-family: 'Impact', 'Tahoma' , sans-serif;
+	color: white;
+	background-color: red;
+	cursor: pointer;
+}
+
+#scoreLabel {
+	font-size: 11px;
+	font-family: 'Consolas', 'Monaco', 'ＭＳ ゴシック';
+}
+
+#timerLabel {
+	font-size: 11px;
+	font-family: 'Consolas', 'Monaco', 'ＭＳ ゴシック';
+}
