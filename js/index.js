@@ -30,6 +30,8 @@ var PREFIX_SCORE = "Score : ";
 var SCREEN_BACKGROUND_COLOR = '#f5deb3';
 var FPS = 32;
 var SCORE_PER_ENEMY_BASE = 5;
+var DIFFICULTY = 0;
+var DIFFICULTY_ACCELERATION = 2.5;
 
 // enemy appear ratio (per 10 seconds)
 var ENEMY_OCCURRENCE_RATIO = 6;
@@ -45,6 +47,14 @@ var bombList = [];
 // Labels
 var scoreLabel = null;
 var timerLabel = null;
+
+
+
+// setting validation
+if(FPS - MAX_LEVEL * DIFFICULTY_ACCELERATION - DIFFICULTY <= 0) {
+	throw new Error("Please reset MAX_LEVEL or DIFFICULTY_ACCELERATION or DIFFICULTY");
+}
+
 
 var isDebug = function(){
 	return DEBUG;
@@ -430,7 +440,8 @@ window.onload = function(){
 
 				//apear Enemy
 				var level = game.getLevel();
-				if(game.frame % (FPS - level) === 0) { // apear rate
+				var rate = parseInt(FPS - level * DIFFICULTY_ACCELERATION - DIFFICULTY);
+				if(game.frame % rate  === 0) { // apear rate
 					var enemy = new Enemy();
 					enemy.show();
 				}
