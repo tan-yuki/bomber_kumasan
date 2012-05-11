@@ -31,7 +31,7 @@ var SCREEN_BACKGROUND_COLOR = '#f5deb3';
 var FPS = 32;
 var SCORE_PER_ENEMY_BASE = 5;
 var DIFFICULTY = 0;
-var DIFFICULTY_ACCELERATION = 2.5;
+var DIFFICULTY_ACCELERATION = 3;
 
 // enemy appear ratio (per 10 seconds)
 var ENEMY_OCCURRENCE_RATIO = 6;
