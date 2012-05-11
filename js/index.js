@@ -237,7 +237,7 @@ var Player = Class.create(Avator, {
 		// set bomb
 		var self = this;
 		var beforeSetBombFrame = 0;
-		game.rootScene.addEventListener(enchant.Event.TOUCH_START , function(event){
+		game.rootScene.addEventListener('bbuttondown' , function(event){ // push b button
 			if (game.frame - beforeSetBombFrame > SET_BOMB_INTERVAL * FPS) { 
 				var bomb = new Bomb(self);
 				beforeSetBombFrame = game.frame;
@@ -327,6 +327,7 @@ window.onload = function(){
 	game.rootScene.backgroundColor = SCREEN_BACKGROUND_COLOR;
 	game.time = GAME_TIME;
 	game.score = 0;
+	game.keybind(B_KEY_CODE, 'b');
 	
 	game.onload = function() {
 		displayStartScreen();
