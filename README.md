@@ -1,4 +1,6 @@
 bomber_kumasan
 ==============
 
-bomber kumasan
+You can play it !
+
+http://www.tan-yuki.info/game/bomber_kumasan/
